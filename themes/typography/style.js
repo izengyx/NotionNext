@@ -13,9 +13,9 @@ const Style = () => {
       .font-typography {
         font-weight: 400;
         font-family:
-          Georgia,
+          'Georgia',
           'Times New Roman',
-          Times,
+          'Times',
           'Source Han Serif CN',
           'Source Han Serif SC',
           'Source Han Serif TC',
