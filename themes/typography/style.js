@@ -11,89 +11,107 @@ const Style = () => {
         -webkit-font-smoothing: antialiased;
       }
 
-      /* 这是外层容器，控制全局基准和评论区 */
+      /* =========================================================
+         1. 全局容器与正文基准设置
+         正文字体已修改为 Noto Serif SC
+         ========================================================= */
       .font-typography {
-        font-weight: 400; /* 建议改回400，500在中文正文中可能略显粗重 */
-        font-size: 20px;
-        font-family:
-          'Noto Serif SC',
-          'Georgia',
-          'Times New Roman',
-          'Times',
-          'Source Han Serif CN',
-          'Source Han Serif SC',
-          'Source Han Serif TC',
-          'Songti SC',
-          'SimSun',
-          serif !important;
+        /* 正文字体：Noto Serif SC (思源宋体) */
+        font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", serif !important;
+        
+        /* 正文大小：20px */
+        font-size: 20px !important;
+        
+        /* 正文粗细：400 (Normal) */
+        font-weight: 400 !important;
+        
+        /* 正文行高：32.8px */
+        line-height: 32.8px !important;
+        
+        /* 文本渲染优化 */
+        text-rendering: optimizeLegibility;
       }
 
-      // 底色
+      /* =========================================================
+         2. 背景设置 (纯白背景)
+         ========================================================= */
       .dark body {
         background-color: rgb(35, 34, 34);
       }
       
-      // 文本不可选取
+      #theme-typography {
+        --primary-color: #2e405b;
+        background-color: #ffffff; /* 纯白 */
+        color: #000000;
+        
+        /* 去除网格背景 */
+        background-image: none;
+        text-shadow: none;
+      }
+      
+      .dark #theme-typography {
+        background-image: none;
+      }
+
+      /* =========================================================
+         3. 标题设置 (保持无衬线体，现代感)
+         ========================================================= */
+      #theme-typography .blog-item-title, 
+      .notion-h1 {
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", 
+                     "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", 
+                     "Microsoft YaHei", sans-serif !important;
+        
+        font-size: 30px !important;
+        font-weight: 700 !important;
+        line-height: 42px !important;
+        margin-bottom: 10px !important;
+        color: rgb(0, 0, 0) !important;
+      }
+      
+      .dark #theme-typography .blog-item-title,
+      .dark .notion-h1 {
+        color: #d1d5db !important;
+      }
+
+      /* =========================================================
+         4. Notion 内容强制覆盖 (确保正文生效)
+         ========================================================= */
+      .notion-text, 
+      .notion-paragraph, 
+      .notion-list-item {
+        /* 强制使用 Noto Serif SC */
+        font-family: "Noto Serif SC", "Source Han Serif SC", "Source Han Serif CN", serif !important;
+        
+        font-size: 20px !important;
+        line-height: 32.8px !important;
+        
+        /* 段落间距：22.4px */
+        margin-bottom: 22.4px !important;
+        margin-top: 0px !important;
+      }
+
+      /* 博客名称 (左上角) */
+      #theme-typography #blog-name,
+      #theme-typography #blog-name-en {
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      }
+
+      /* 杂项 */
       .forbid-copy {
         user-select: none;
         -webkit-user-select: none;
         -ms-user-select: none;
       }
-
-      .dark #theme-typography {
-        /* 如果深色模式也要纯色背景，请注释掉下面这段 linear-gradient */
-        background-image: linear-gradient(
-              to right,
-              rgb(255 255 255 / 0.04) 1px,
-              transparent 1px
-            ),
-            linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
-      }
-
-      #theme-typography {
-        --primary-color: #2e405b;
-        background-color: #ffffff; /* 纯白背景 */
-        color: #2e405b;
-        text-shadow: 1px 1px 1px rgb(0 0 0 / 0.04);
-        /* 已去除背景网格 */
-      }
-
-      #theme-typography #blog-name,
-      #theme-typography #blog-name-en {
-        font-family: HiraMinProN-W6, 'Source Han Serif CN',
-          'Source Han Serif SC', 'Source Han Serif TC', serif;
-      }
-
-      #theme-typography .blog-item-title {
-        color: #276077;
-        font-size: 24px; /* 标题建议比正文再大一点 */
-      }
-
-      .dark #theme-typography .blog-item-title {
-        color: #d1d5db;
-      }
-
-      /* 【关键修改在这里】 */
-      /* 针对 Notion 渲染的内容进行强制覆盖 */
+      
       .notion {
         margin-top: 0 !important;
         margin-bottom: 0 !important;
-        
-        /* 强制设置正文字体大小 */
-        font-size: 20px !important;
-        
-        /* 字号变大后，必须增加行高，否则字会挤在一起 */
-        line-height: 1.8 !important; 
-      }
-      
-      /* 这是一个额外的保险：如果上面的不生效，这会强制针对段落生效 */
-      .notion-text, .notion-list-item, .notion-quote {
-         font-size: 20px !important;
       }
 
       #container-wrapper .scroll-hidden {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none;
+        scrollbar-width: none;
       }
     `}</style>
   )
