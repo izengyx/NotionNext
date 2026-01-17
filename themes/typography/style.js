@@ -11,7 +11,8 @@ const Style = () => {
         -webkit-font-smoothing: antialiased;
       }
       .font-typography {
-        font-weight: 400;
+        font-weight: 500;
+        font-size: 20px;
         font-family:
           'Noto Serif SC',
           'Georgia',
@@ -47,26 +48,19 @@ const Style = () => {
 
       #theme-typography {
         --primary-color: #2e405b;
-        background-color: rgb(255 255 255) / 1;
+        background-color: #ffffff;
         color: #2e405b;
-        background-size: 7px 7px;
         text-shadow: 1px 1px 1px rgb(0 0 0 / 0.04);
-        background-image: linear-gradient(
-            to right,
-            rgb(0 0 0 / 0.04) 1px,
-            transparent 1px
-          ),
-          linear-gradient(to bottom, rgb(0 0 0 / 0.04) 1px, transparent 1px);
       }
 
       #theme-typography #blog-name {
-        font-family: 'Microsoft YaHei', '微软雅黑', 'PingFang SC',
-          'Hiragino Sans GB', 'STHeiti', 'WenQuanYi Micro Hei', sans-serif;
+        font-family: HiraMinProN-W6, 'Source Han Serif CN',
+          'Source Han Serif SC', 'Source Han Serif TC', serif;
       }
 
       #theme-typography #blog-name-en {
-        font-family: 'Microsoft YaHei', '微软雅黑', 'PingFang SC',
-          'Hiragino Sans GB', 'STHeiti', 'WenQuanYi Micro Hei', sans-serif;
+        font-family: HiraMinProN-W6, 'Source Han Serif CN',
+          'Source Han Serif SC', 'Source Han Serif TC', serif;
       }
 
       #theme-typography .blog-item-title {
