@@ -13,16 +13,16 @@ const Style = () => {
       .font-typography {
         font-weight: 400;
         font-family:
-          Source Sans Pro,
-          Roboto,
-          Helvetica,
-          Helvetica Neue,
-          Source Han Sans SC,
-          Source Han Sans TC,
-          PingFang SC,
-          PingFang HK,
-          PingFang TC,
-          sans-serif !important;
+          'Noto Serif SC',
+          'Georgia',
+          'Times New Roman',
+          'Times',
+          'Source Han Serif CN',
+          'Source Han Serif SC',
+          'Source Han Serif TC',
+          'Songti SC',
+          'SimSun',
+          serif !important;
         }
       }
       // 底色
@@ -60,13 +60,13 @@ const Style = () => {
       }
 
       #theme-typography #blog-name {
-        font-family: HiraMinProN-W6, 'Source Han Serif CN',
-          'Source Han Serif SC', 'Source Han Serif TC', serif;
+        font-family: 'Microsoft YaHei', '微软雅黑', 'PingFang SC',
+          'Hiragino Sans GB', 'STHeiti', 'WenQuanYi Micro Hei', sans-serif;
       }
 
       #theme-typography #blog-name-en {
-        font-family: HiraMinProN-W6, 'Source Han Serif CN',
-          'Source Han Serif SC', 'Source Han Serif TC', serif;
+        font-family: 'Microsoft YaHei', '微软雅黑', 'PingFang SC',
+          'Hiragino Sans GB', 'STHeiti', 'WenQuanYi Micro Hei', sans-serif;
       }
 
       #theme-typography .blog-item-title {
