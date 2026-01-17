@@ -13,16 +13,15 @@ const Style = () => {
       .font-typography {
         font-weight: 400;
         font-family:
-          Source Sans Pro,
-          Roboto,
-          Helvetica,
-          Helvetica Neue,
-          Source Han Sans SC,
-          Source Han Sans TC,
-          PingFang SC,
-          PingFang HK,
-          PingFang TC,
-          sans-serif !important;
+          Georgia,
+          'Times New Roman',
+          Times,
+          'Source Han Serif CN',
+          'Source Han Serif SC',
+          'Source Han Serif TC',
+          'Songti SC',
+          'SimSun',
+          serif !important;
         }
       }
       // 底色
