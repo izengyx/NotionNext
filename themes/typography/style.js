@@ -23,7 +23,7 @@ const Style = () => {
         font-size: 20px !important;
         
         /* 正文粗细：400 (Normal) */
-        font-weight: 400 !important;
+        font-weight: 500 !important;
         
         /* 正文行高：32.8px */
         line-height: 32.8px !important;
@@ -41,7 +41,7 @@ const Style = () => {
       
       #theme-typography {
         --primary-color: #2e405b;
-        background-color: #ffffff; /* 纯白 */
+        background-color: #f5f5f5; /* 纯白 */
         color: #000000;
         
         /* 去除网格背景 */
